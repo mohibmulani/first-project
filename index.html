@@ -359,50 +359,153 @@
             scroll-behavior: smooth;
         }
 
-        /* Add footer styles */
+        /* Update footer styles */
         .footer {
             background: white;
-            color: var(--text-color);
-            padding: 4rem 0 2rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 2rem 0 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .footer-content {
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .footer-main h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-color);
+            line-height: 1.2;
+        }
+
+        .footer-main p {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-subtitle {
+            margin-top: 1rem !important;
+            margin-bottom: 1rem !important;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 36px;
+            height: 36px;
+            background: var(--light-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            background: #f1f5f9;
+        }
+
+        .social-link img {
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer-bottom {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 3rem;
-        }
-
-        .footer-section h4 {
-            color: var(--text-color);
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-
-        .footer-section ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-section a {
+            padding: 1rem 2rem 0;
+            text-align: center;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 1.5rem;
             color: #64748b;
-            text-decoration: none;
-            transition: color 0.2s;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
         }
 
-        .footer-section a:hover {
-            color: var(--primary-color);
+        /* Update responsive styles */
+        @media (max-width: 1200px) {
+            .footer {
+                margin: 0 1.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 1.5rem 0 1rem;
+            }
+
+            .footer-main h3 {
+                font-size: 1.5rem;
+                padding: 0;
+            }
+
+            .footer-main p {
+                font-size: 0.9rem;
+                padding: 0;
+            }
+
+            .social-links {
+                gap: 0.75rem;
+            }
+
+            .social-link {
+                width: 32px;
+                height: 32px;
+            }
+
+            .social-link img {
+                width: 16px;
+                height: 16px;
+            }
+
+            .footer-bottom {
+                padding: 0.75rem 1.5rem 0;
+                margin-top: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer {
+                margin: 0 1rem;
+                padding: 1.25rem 0 0.75rem;
+            }
+
+            .footer-main h3 {
+                font-size: 1.25rem;
+            }
+
+            .footer-main p {
+                font-size: 0.85rem;
+            }
+
+            .social-links {
+                gap: 0.5rem;
+            }
+
+            .social-link {
+                width: 28px;
+                height: 28px;
+            }
+
+            .social-link img {
+                width: 14px;
+                height: 14px;
+            }
+
+            .footer-bottom {
+                padding: 0.5rem 1rem 0;
+                margin-top: 0.75rem;
+                font-size: 0.8rem;
+            }
         }
 
         /* Add these new styles */
@@ -1183,40 +1286,30 @@
         });
     </script>
 
-    <!-- Add footer section before closing body tag -->
+    <!-- Update footer section -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-section">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#">University Placement</a></li>
-                    <li><a href="#">Visa Assistance</a></li>
-                    <li><a href="#">Course Selection</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Student Guide</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Cookie Policy</a></li>
-                </ul>
+            <div class="footer-main">
+                <h3>Need Guidance? Let Us Help You</h3>
+                <p>India's Most Trusted and Student-Friendly Study Abroad Partner</p>
+                <p class="footer-subtitle">Explore More and Stay updated with Abbacy</p>
+                <div class="social-links">
+                    <a href="#" class="social-link instagram">
+                        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link facebook">
+                        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link youtube">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+                    </a>
+                    <a href="#" class="social-link whatsapp">
+                        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+                    </a>
+                    <a href="#" class="social-link linktree">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8743/8743996.png" alt="Linktree">
+                    </a>
+                </div>
             </div>
         </div>
         <div class="footer-bottom">
