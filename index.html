@@ -247,146 +247,99 @@
 
         /* About Section */
         .about {
-            max-width: 1200px;
-            margin: 4rem auto;
-            padding: 0 2rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            background: white;
+            margin-top: 4rem;
+            overflow: hidden;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 600px;
+            border-radius: 12px 0 0 12px;
+            overflow: hidden;
         }
 
         .about-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            border-radius: 8px;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
         }
 
-        .about h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
+        .about-content {
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: white;
+            max-width: 600px;
+        }
+
+        .about-content h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
             margin-bottom: 1.5rem;
+            color: var(--text-color);
+            line-height: 1.2;
         }
 
-        .about p {
-            color: #666;
-            margin-bottom: 1rem;
+        .about-content p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 600px;
         }
 
-        .center-button {
-            text-align: center;
-            margin: 2rem 0;
+        /* Update responsive styles */
+        @media (max-width: 1200px) {
+            .about {
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
         }
 
         @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1.5rem;
-                padding: 0 1rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            body {
-                padding-top: 60px;
-            }
-
-            .nav {
-                padding: 0.5rem 0;
-            }
-
-            .nav-container {
-                padding: 0.5rem 1rem;
-            }
-
-            .logo-text {
-                font-size: 1.1rem;
-            }
-
-            .nav-links {
-                gap: 1.5rem;
-            }
-
-            .nav-link {
-                font-size: 0.9rem;
-            }
-
-            .hero {
-                padding: 2rem 1.5rem;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-                margin-bottom: 1rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-                padding: 0 1rem;
-            }
-
-            .services {
-                padding: 3rem 1.5rem;
-            }
-
-            .services-grid {
-                gap: 1rem;
-            }
-
-            .service-card {
-                padding: 1.5rem;
-            }
-
             .about {
-                padding: 3rem 1.5rem;
                 grid-template-columns: 1fr;
-                gap: 2rem;
+                margin-left: 2rem;
+                margin-right: 2rem;
             }
 
-            .about-image img {
-                height: 250px;
-                object-fit: cover;
-                width: 100%;
+            .about-image {
+                min-height: 400px;
+                order: -1;
                 border-radius: 12px;
             }
 
             .about-content {
-                padding: 0;
+                padding: 3rem 2rem;
+                max-width: 100%;
             }
+        }
 
-            .about-content h2 {
-                font-size: 2rem;
-                margin-bottom: 1rem;
-            }
-
-            /* Add background color to sections for better separation */
-            .services {
-                background: #f8fafc;
-            }
-
+        @media (max-width: 768px) {
             .about {
-                background: white;
-            }
-
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-                padding: 2rem 1rem;
-                gap: 2rem;
+                margin-left: 1.5rem;
+                margin-right: 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
-            .nav-links {
-                display: none; /* Consider adding a mobile menu button */
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-                padding: 0 0.5rem;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
+            .about {
+                margin-left: 1rem;
+                margin-right: 1rem;
             }
         }
 
@@ -839,6 +792,190 @@
 
             .destination-card {
                 padding: 1.5rem;
+            }
+        }
+
+        /* Add/update these responsive styles in index.html */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 2.75rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .destinations-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .testimonials-container {
+                padding: 4rem 2rem;
+            }
+
+            .testimonial-cards {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-content {
+                padding: 2rem;
+            }
+
+            .about-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+
+            .nav {
+                padding: 0.5rem 0;
+            }
+
+            .nav-container {
+                padding: 0 1rem;
+            }
+
+            .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1.1rem;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .hero {
+                padding: 4rem 1.5rem;
+                min-height: auto;
+            }
+
+            .hero h1 {
+                font-size: 2.25rem;
+                line-height: 1.2;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                max-width: 100%;
+            }
+
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+                margin-bottom: 2rem;
+            }
+
+            .services-grid {
+                padding: 0 1.5rem;
+            }
+
+            .service-card {
+                padding: 1.5rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .destinations-grid {
+                padding: 0 1.5rem;
+            }
+
+            .testimonials-container {
+                padding: 3rem 1.5rem;
+            }
+
+            .testimonial-header h2 {
+                font-size: 2rem;
+            }
+
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .about-content {
+                padding: 2rem 1.5rem;
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            .about-content p {
+                font-size: 0.95rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                gap: 0.75rem;
+            }
+
+            .logo-text {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .services-grid,
+            .destinations-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 0 1rem;
+            }
+
+            .service-card,
+            .destination-card {
+                padding: 1.25rem;
+            }
+
+            .testimonials-container {
+                padding: 2rem 1rem;
+            }
+
+            .testimonial-header h2 {
+                font-size: 1.75rem;
+            }
+
+            .testimonial-card {
+                padding: 1.25rem;
+            }
+
+            .about-content {
+                padding: 2rem 1rem;
+            }
+
+            .about-image {
+                height: 200px;
             }
         }
     </style>
