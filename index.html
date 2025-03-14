@@ -9,18 +9,19 @@
 </head>
 <body>
     <div class="preloader"><div class="spinner"></div></div>
-    <nav class="nav">
+    <nav class="nav" role="navigation">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
+            <a href="index.html" class="nav-logo" aria-label="Abaccy Global Home">
                 <div class="logo-icon">A</div>
                 <span class="logo-text">Abaccy Global</span>
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <div class="nav-links" role="menu">
+                <a href="index.html" class="nav-link" role="menuitem">Home</a>
+                <a href="#services" class="nav-link" role="menuitem">Services</a>
+                <a href="#about" class="nav-link" role="menuitem">About</a>
+                <a href="#faq" class="nav-link" role="menuitem">FAQ</a>
+                <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
@@ -35,28 +36,128 @@
     </section>
 
     <section class="services" id="services">
-        <h2>Our Services</h2>
-        <p class="services-description">We offer comprehensive solutions to make your study abroad journey seamless.</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-description">We offer comprehensive solutions to make your study abroad journey seamless.</p>
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🎓</div>
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20ZM13 7H11V13H17V11H13V7Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
                 <h3>University Selection</h3>
                 <p>Personalized guidance to find the perfect university for you.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">📝</div>
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V7H19V19ZM13 9H11V11H13V9ZM13 13H11V15H13V13ZM15 15H17V13H15V15ZM15 11H17V9H15V11ZM9 15H11V13H9V15ZM9 11H11V9H9V11ZM7 15H9V13H7V15ZM7 11H9V9H7V11Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
                 <h3>Application Support</h3>
                 <p>Expert assistance with applications and documentation.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">✈️</div>
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 5V19H5V5H19ZM12 6C14.76 6 17 8.24 17 11C17 13.76 14.76 16 12 16C9.24 16 7 13.76 7 11C7 8.24 9.24 6 12 6ZM12 14C13.66 14 15 12.66 15 11C15 9.34 13.66 8 12 8C10.34 8 9 9.34 9 11C9 12.66 10.34 14 12 14Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
                 <h3>Visa Assistance</h3>
                 <p>End-to-end support for visa processing and interviews.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">💡</div>
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 6H12L10 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V8C22 6.9 21.1 6 20 6ZM20 18H4V6H9.17L11.17 8H20V18ZM13 13H11V11H13V13ZM13 9H11V7H13V9ZM15 13H17V11H15V13ZM15 9H17V7H15V9ZM9 13H7V11H9V13ZM9 9H7V7H9V9Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
                 <h3>Career Counseling</h3>
                 <p>Guidance to align your education with your career goals.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 2H4C2.9 2 2 2.9 2 4V20C2 21.1 2.9 22 4 22H20C21.1 22 22 21.1 22 20V4C22 2.9 21.1 2 20 2ZM20 20H4V4H20V20ZM12 6C9.79 6 8 7.79 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 7.79 14.21 6 12 6ZM12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Test Preparation</h3>
+                <p>Comprehensive support for IELTS, TOEFL, and other exams.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 17H13V7H11V17ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Scholarship Assistance</h3>
+                <p>Help in securing scholarships to fund your education.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 18H4V8H20V18ZM18 10H6V12H18V10Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Education Loan</h3>
+                <p>Guidance on securing affordable education loans.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2C8.13 2 5 5.13 5 9C5 11.38 6.19 13.47 8 14.74V17C8 18.1 8.9 19 10 19H14C15.1 19 16 18.1 16 17V14.74C17.81 13.47 19 11.38 19 9C19 5.13 15.87 2 12 2ZM12 11C10.9 11 10 10.1 10 9C10 7.9 10.9 7 12 7C13.1 7 14 7.9 14 9C14 10.1 13.1 11 12 11ZM18 20V21C18 21.55 17.55 22 17 22H7C6.45 22 6 21.55 6 21V20H18Z" fill="url(#gradient)"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1e3a8a" />
+                                <stop offset="100%" style="stop-color:#9333ea" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>Accommodation Support</h3>
+                <p>Assistance in finding safe and comfortable housing.</p>
             </div>
         </div>
     </section>
@@ -64,8 +165,8 @@
     <section class="destinations" id="destinations">
         <div class="destinations-container">
             <div class="destinations-center">
-                <h2>Popular Destinations</h2>
-                <p class="destinations-description">Explore top study destinations with us.</p>
+                <h2 class="section-title">Study Destinations</h2>
+                <p class="section-description">Explore top study destinations with us.</p>
             </div>
             <div class="destinations-grid">
                 <div class="destination-card">
@@ -104,82 +205,71 @@
 
     <section class="testimonials">
         <div class="testimonials-container">
-            <div class="testimonials-left">
-                <h2>What Our Students Say</h2>
-                <p>Hear from students who transformed their lives with Abaccy Global.</p>
-                <div class="stats">
-                    <div class="stat-item">
-                        <span class="stat-number">95%</span>
-                        <span class="stat-label">Success Rate</span>
+            <h2 class="section-title">Absolutely Loved by Our Students</h2>
+            <div class="testimonial-carousel">
+                <div class="carousel-track">
+                    <div class="carousel-slide">
+                        <div class="quote-icon">“</div>
+                        <p>Abaccy Global’s expert guidance helped me secure admission to my dream university in the USA.</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1506794778202-cadff45a1f1e?auto=format&fit=crop&w=50&h=50" alt="Varun Gupta">
+                            <div>
+                                <span>Varun Gupta</span>
+                                <small>Student, University of Texas</small>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Students Guided</span>
+                    <div class="carousel-slide">
+                        <div class="quote-icon">“</div>
+                        <p>Their visa assistance made my journey to the UK smooth and stress-free.</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=50&h=50" alt="Debangshu Roy">
+                            <div>
+                                <span>Debangshu Roy</span>
+                                <small>Student, Oxford University</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="quote-icon">“</div>
+                        <p>The personalized university selection process was a game-changer for my Canada study plans.</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=50&h=50" alt="Sahil Kaul">
+                            <div>
+                                <span>Sahil Kaul</span>
+                                <small>Student, University of Toronto</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="quote-icon">“</div>
+                        <p>Abaccy’s support helped me get a scholarship for my Australian education.</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=50&h=50" alt="Abhi">
+                            <div>
+                                <span>Abhi and Deepanshi</span>
+                                <small>Students, University of Melbourne</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <div class="quote-icon">“</div>
+                        <p>Their career counseling aligned my German study abroad goals perfectly.</p>
+                        <div class="client-info">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=50&h=50" alt="Shashank Iyer">
+                            <div>
+                                <span>Shashank Iyer</span>
+                                <small>Student, Technical University of Munich</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="testimonials-right">
-                <div class="testimonial-cards">
-                    <div class="testimonial-card">
-                        <div class="student-info">
-                            <span class="student-name">Priya Sharma</span>
-                            <span class="student-title">University of Toronto</span>
-                        </div>
-                        <p class="testimonial-text">Abaccy Global made my dream of studying abroad a reality with their expert guidance.</p>
-                        <div class="testimonial-goals">
-                            <span class="goal-item">Goal: Masters in Computer Science</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="student-info">
-                            <span class="student-name">Rohan Patel</span>
-                            <span class="student-title">Oxford University</span>
-                        </div>
-                        <p class="testimonial-text">Their visa support was impeccable, and I got my admission smoothly.</p>
-                        <div class="testimonial-goals">
-                            <span class="goal-item">Goal: MBA</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="student-info">
-                            <span class="student-name">Aisha Khan</span>
-                            <span class="student-title">University of Melbourne</span>
-                        </div>
-                        <p class="testimonial-text">The team’s personalized approach helped me secure my scholarship.</p>
-                        <div class="testimonial-goals">
-                            <span class="goal-item">Goal: Engineering</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="student-info">
-                            <span class="student-name">Vikram Singh</span>
-                            <span class="student-title">University of British Columbia</span>
-                        </div>
-                        <p class="testimonial-text">Thanks to Abaccy, I got into my dream university with a full scholarship.</p>
-                        <div class="testimonial-goals">
-                            <span class="goal-item">Goal: Data Science</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="student-info">
-                            <span class="student-name">Neha Gupta</span>
-                            <span class="student-title">National University of Singapore</span>
-                        </div>
-                        <p class="testimonial-text">Their support during my application process was phenomenal.</p>
-                        <div class="testimonial-goals">
-                            <span class="goal-item">Goal: Business Analytics</span>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="student-info">
-                            <span class="student-name">Arjun Menon</span>
-                            <span class="student-title">Technical University of Munich</span>
-                        </div>
-                        <p class="testimonial-text">Abaccy’s career counseling helped me choose the perfect program for my future.</p>
-                        <div class="testimonial-goals">
-                            <span class="goal-item">Goal: Mechanical Engineering</span>
-                        </div>
-                    </div>
+                <div class="carousel-nav">
+                    <span class="carousel-dot active"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
+                    <span class="carousel-dot"></span>
                 </div>
             </div>
         </div>
@@ -190,17 +280,80 @@
             <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1350&q=80" alt="Diverse group of students collaborating in a modern university library">
         </div>
         <div class="about-content">
-            <h2>About Us</h2>
-            <p>Abaccy Global is India’s leading education consultancy, dedicated to helping students achieve their global education dreams. With a team of experts and a 95% success rate, we provide personalized support from university selection to visa approval.</p>
+            <h2 class="section-title">About Us</h2>
+            <p class="section-description">Abaccy Global is India’s leading education consultancy, dedicated to helping students achieve their global education dreams. With a team of experts and a 95% success rate, we provide personalized support from university selection to visa approval.</p>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="faq-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">Got questions? We’ve got answers to help you get started.</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-1">
+                        How do I start my study abroad journey with Abaccy Global?
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-1">
+                        <p>Starting your study abroad journey with Abaccy Global is simple. First, schedule a consultation with one of our experts through our contact form. We’ll assess your goals, academic background, and preferences to create a personalized plan, guiding you through university selection, applications, visas, and more.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-2">
+                        What documents are required for the university application process?
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-2">
+                        <p>The required documents typically include your academic transcripts, standardized test scores (like IELTS/TOEFL), a statement of purpose (SOP), letters of recommendation (LORs), a valid passport, and proof of financial support. Requirements may vary by university, so our team will help you prepare a tailored checklist.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-3">
+                        Can Abaccy Global help with scholarships and funding?
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-3">
+                        <p>Absolutely! We provide comprehensive scholarship assistance, helping you identify and apply for scholarships based on your academic profile and chosen destination. Additionally, we guide you through education loan options to ensure your study abroad dreams are financially supported.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-4">
+                        How long does the visa process take, and what support do you provide?
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-4">
+                        <p>The visa process duration varies by country, typically ranging from 4 to 12 weeks. We offer end-to-end visa assistance, including document preparation, application submission, and interview coaching, ensuring a smooth and stress-free experience.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-5">
+                        What happens after I get accepted into a university?
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-5">
+                        <p>Once accepted, we assist with pre-departure preparations, including visa applications, accommodation arrangements, and travel planning. We also provide guidance on cultural adaptation and post-arrival support to help you settle into your new environment seamlessly.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq-answer-6">
+                        Do you offer support for test preparation like IELTS or TOEFL?
+                        <span class="faq-toggle-icon">+</span>
+                    </button>
+                    <div class="faq-answer" id="faq-answer-6">
+                        <p>Yes, we offer comprehensive test preparation support for exams like IELTS, TOEFL, and others. Our resources include study materials, practice tests, and expert coaching to help you achieve the scores required for your desired university.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-main">
-                <h3>Need Guidance? Let Us Help You</h3>
-                <p>India's Most Trusted Study Abroad Partner</p>
-                <p class="footer-subtitle">Explore More and Stay updated with Abbacy</p>
+                <h3 class="footer-title">Need Guidance? Let Us Help You</h3>
+                <p class="footer-subtitle">India's Most Trusted Study Abroad Partner</p>
+                <p class="footer-description">Explore More and Stay updated with Abaccy</p>
                 <div class="social-links">
                     <a href="#" class="social-link instagram">
                         <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
@@ -228,15 +381,22 @@
     <a href="contact.html" class="floating-button">Talk to an Expert</a>
 
     <script>
-        // Navigation toggle
         document.querySelector('.nav-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
+            const navLinks = document.querySelector('.nav-links');
+            const toggleButton = document.querySelector('.nav-toggle');
+            navLinks.classList.toggle('active');
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            toggleButton.textContent = isExpanded ? '☰' : '✕';
+            document.body.classList.toggle('no-scroll', navLinks.classList.contains('active')); // Prevent scrolling
         });
 
         // Sticky nav shadow and floating button
         window.addEventListener('scroll', () => {
-            document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 0);
-            document.querySelector('.floating-button').classList.toggle('visible', window.scrollY > 100);
+            const nav = document.querySelector('.nav');
+            const floatingBtn = document.querySelector('.floating-button');
+            nav.classList.toggle('scrolled', window.scrollY > 0);
+            floatingBtn.classList.toggle('visible', window.scrollY > 200); // Adjusted trigger point
         });
 
         // Preloader
@@ -251,6 +411,60 @@
             });
         }, { threshold: 0.1, rootMargin: '50px' });
         document.querySelectorAll('.destination-card').forEach(card => observer.observe(card));
+
+        // Carousel Functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const totalSlides = slides.length;
+
+        function updateCarousel() {
+            const slideWidth = slides[0].clientWidth;
+            document.querySelector('.carousel-track').style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[currentSlide].classList.add('active');
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+
+        window.addEventListener('resize', updateCarousel);
+
+        // Auto-slide every 5 seconds
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }, 5000);
+
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                const answer = document.getElementById(button.getAttribute('aria-controls'));
+
+                // Close all other FAQs
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    const otherButton = item.querySelector('.faq-question');
+                    const otherAnswer = item.querySelector('.faq-answer');
+                    if (otherButton !== button) {
+                        otherButton.setAttribute('aria-expanded', 'false');
+                        otherButton.querySelector('.faq-toggle-icon').textContent = '+';
+                        otherAnswer.style.maxHeight = null;
+                        otherAnswer.style.opacity = 0;
+                    }
+                });
+
+                // Toggle the clicked FAQ
+                button.setAttribute('aria-expanded', !isExpanded);
+                button.querySelector('.faq-toggle-icon').textContent = isExpanded ? '+' : '−';
+                answer.style.maxHeight = isExpanded ? null : `${answer.scrollHeight}px`;
+                answer.style.opacity = isExpanded ? 0 : 1;
+            });
+        });
     </script>
 </body>
 </html>

@@ -9,26 +9,27 @@
 </head>
 <body>
     <div class="preloader"><div class="spinner"></div></div>
-    <nav class="nav">
+    <nav class="nav" role="navigation">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">
+            <a href="index.html" class="nav-logo" aria-label="Abaccy Global Home">
                 <div class="logo-icon">A</div>
                 <span class="logo-text">Abaccy Global</span>
             </a>
-            <button class="nav-toggle" aria-label="Toggle navigation menu">☰</button>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="index.html#services" class="nav-link">Services</a>
-                <a href="index.html#about" class="nav-link">About</a>
-                <a href="contact.html" class="nav-link">Contact</a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <div class="nav-links" role="menu">
+                <a href="index.html" class="nav-link" role="menuitem">Home</a>
+                <a href="index.html#services" class="nav-link" role="menuitem">Services</a>
+                <a href="index.html#about" class="nav-link" role="menuitem">About</a>
+                <a href="index.html#faq" class="nav-link" role="menuitem">FAQ</a>
+                <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
             </div>
         </div>
     </nav>
 
-    <div class="contact-container">
+    <section class="contact-container">
         <div class="contact-header">
-            <h1>Let's Talk About Your Future</h1>
-            <p>Expert Guidance • Quick Response • Global Support</p>
+            <h1 class="section-title">Let's Talk About Your Future</h1>
+            <p class="section-description">Expert Guidance • Quick Response • Global Support</p>
             <div class="value-propositions">
                 <div class="value-item">
                     <span class="value-icon">🎓</span>
@@ -45,25 +46,30 @@
             </div>
         </div>
         <div class="form-container">
-            <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSfaAH-RnZdcNVGma7_OBbUNHxNTQBI-4Qv-iQQOdBQClsP6jQ/viewform?embedded=true"
-                title="Abaccy Global Contact Form"
-                frameborder="0" 
-                marginheight="0" 
-                marginwidth="0"
-                loading="lazy"
-                height="500">
-                Loading…
-            </iframe>
+            <h2 class="form-title">Get in Touch Today!</h2>
+            <p class="form-description">Fill out this form and we’ll be in touch ASAP!</p>
+            <div class="iframe-wrapper">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSfaAH-RnZdcNVGma7_OBbUNHxNTQBI-4Qv-iQQOdBQClsP6jQ/viewform?embedded=true"
+                    title="Abaccy Global Contact Form"
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    loading="lazy">
+                    Loading…
+                </iframe>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <a href="contact.html" class="floating-button">Talk to an Expert</a>
 
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-main">
-                <h3>Need Guidance? Let Us Help You</h3>
-                <p>India's Most Trusted and Student-Friendly Study Abroad Partner</p>
-                <p class="footer-subtitle">Explore More and Stay updated with Abbacy</p>
+                <h3 class="footer-title">Need Guidance? Let Us Help You</h3>
+                <p class="footer-subtitle">India's Most Trusted and Student-Friendly Study Abroad Partner</p>
+                <p class="footer-description">Explore More and Stay updated with Abaccy</p>
                 <div class="social-links">
                     <a href="#" class="social-link instagram">
                         <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
@@ -89,14 +95,22 @@
     </footer>
 
     <script>
-        // Navigation toggle
         document.querySelector('.nav-toggle').addEventListener('click', () => {
-            document.querySelector('.nav-links').classList.toggle('active');
+            const navLinks = document.querySelector('.nav-links');
+            const toggleButton = document.querySelector('.nav-toggle');
+            navLinks.classList.toggle('active');
+            const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+            toggleButton.setAttribute('aria-expanded', !isExpanded);
+            toggleButton.textContent = isExpanded ? '☰' : '✕';
+            document.body.classList.toggle('no-scroll', navLinks.classList.contains('active')); // Prevent scrolling
         });
 
-        // Sticky nav shadow
+        // Sticky nav shadow and floating button
         window.addEventListener('scroll', () => {
-            document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 0);
+            const nav = document.querySelector('.nav');
+            const floatingBtn = document.querySelector('.floating-button');
+            nav.classList.toggle('scrolled', window.scrollY > 0);
+            floatingBtn.classList.toggle('visible', window.scrollY > 200); // Adjusted trigger point
         });
 
         // Preloader
